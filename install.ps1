@@ -4,7 +4,7 @@
 #   File: Double-click install.bat (from extracted ZIP)
 
 $RAW_BASE   = "https://raw.githubusercontent.com/alfredbot90/remind-me/main"
-$ConfigPath = Join-Path $env:APPDATA "Claude\claude_desktop_config.json"
+$ConfigPath = Join-Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData)) "Claude\claude_desktop_config.json"
 $BackupPath = "$ConfigPath.bak"
 
 Write-Host ""
@@ -17,7 +17,7 @@ Write-Host ""
 $webInstall = [string]::IsNullOrEmpty($PSScriptRoot)
 
 if ($webInstall) {
-    $InstallDir = Join-Path $env:APPDATA "remind-me"
+    $InstallDir = Join-Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData)) "remind-me"
     $McpScript  = Join-Path $InstallDir "cron_mcp.ps1"
     Write-Host "  Downloading to $InstallDir ..." -ForegroundColor DarkGray
     New-Item -ItemType Directory -Path $InstallDir -Force | Out-Null
