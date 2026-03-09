@@ -89,7 +89,7 @@ $config.mcpServers | Add-Member -NotePropertyName "remind-me" -NotePropertyValue
 
 # -- 4. Write config ----------------------------------------------------------
 $json = $config | ConvertTo-Json -Depth 10
-[System.IO.File]::WriteAllText($ConfigPath, $json, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText($ConfigPath, $json, (New-Object System.Text.UTF8Encoding $false))
 
 Write-Host "  OK  Config updated" -ForegroundColor Green
 Write-Host "      $ConfigPath" -ForegroundColor DarkGray
