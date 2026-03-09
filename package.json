@@ -1,0 +1,14 @@
+{
+  "name": "cron-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for scheduling Windows desktop reminders via Claude Desktop",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "chrono-node": "^2.7.0"
+  }
+}
