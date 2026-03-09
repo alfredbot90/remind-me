@@ -26,13 +26,24 @@ Reminders fire as Windows desktop notifications even when Claude Desktop is clos
 
 ---
 
-## Install (3 steps)
+## Install
+
+### Option A — One-liner (recommended)
+
+Open PowerShell and paste:
+
+```powershell
+irm https://raw.githubusercontent.com/alfredbot90/remind-me/main/install.ps1 | iex
+```
+
+Downloads and configures everything automatically. No files to manage.
+
+### Option B — ZIP install
 
 1. **[⬇️ Download ZIP](https://github.com/alfredbot90/remind-me/archive/refs/heads/main.zip)** and extract it anywhere
 2. Double-click **`install.bat`**
-3. Restart Claude Desktop when prompted
 
-That's it. The installer automatically merges the config without touching your existing Claude Desktop settings.
+Both options automatically merge into your existing Claude Desktop config without overwriting anything.
 
 ---
 
