@@ -26,40 +26,13 @@ Reminders fire as Windows desktop notifications even when Claude Desktop is clos
 
 ---
 
-## Install (2 steps)
+## Install (3 steps)
 
-### 1. Download
+1. **[⬇️ Download ZIP](https://github.com/alfredbot90/remind-me/archive/refs/heads/main.zip)** and extract it anywhere
+2. Double-click **`install.bat`**
+3. Restart Claude Desktop when prompted
 
-**[⬇️ Download ZIP](https://github.com/alfredbot90/remind-me/archive/refs/heads/main.zip)** and extract it anywhere (e.g. `C:\remind-me\`).
-
-Or with git:
-```
-git clone https://github.com/alfredbot90/remind-me.git
-```
-
-### 2. Add to Claude Desktop
-
-Open (or create) this file:
-```
-%APPDATA%\Claude\claude_desktop_config.json
-```
-
-Add the following — replace the path with wherever you extracted the folder:
-
-```json
-{
-  "mcpServers": {
-    "remind-me": {
-      "command": "powershell.exe",
-      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "C:\\remind-me\\cron_mcp.ps1"]
-    }
-  }
-}
-```
-
-If you already have other MCP servers, just add `remind-me` inside the existing `mcpServers` block.
-
-**Restart Claude Desktop.** Click the 🔨 tools icon to confirm the three tools appear.
+That's it. The installer automatically merges the config without touching your existing Claude Desktop settings.
 
 ---
 
